@@ -1,1 +1,2 @@
-import './styles/globals.css'
+import 'phosphor-icons'
+import './styles/index.css'

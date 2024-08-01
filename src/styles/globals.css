@@ -1,3 +1,115 @@
-body {
-  background-color: black;
+*, 
+*::before, 
+*::after {
+  box-sizing: border-box;
 }
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+:root {
+  /* Linear gradient */
+  --linear-gradient: linear-gradient(90deg, rgba(45,170,110,1) 0%, rgba(45,170,170,1) 33.33%, rgba(133,108,207,1) 66.67%, rgba(214,88,179,1) 100%);
+
+  /* Principal colors */
+  --principal-pink: #D658B3;
+  --principal-green: #45B442;
+
+  /* Base colors */
+  --base-gray-100: #F4F1F2;
+  --base-gray-200: #E9E7E9;
+  --base-gray-300: #DFDCDF;
+  --base-gray-400: ##D3CFD2;
+  --base-gray-500: #756C71;
+  --base-gray-600: #4A4448;
+  --base-gray-700: #332B31;
+
+  /* Font family*/
+  --font-family: 'Oxygen', system-ui, sans-serif;
+
+  /* Font weight */
+  --font-weight-bold: 700;
+  --font-weight-regular: 400;
+  
+  /* Font configs */
+  --heading-lg: bold 1.5rem/140% var(--font-family);
+  --heading-md: bold 1.125rem/140% var(--font-family);
+  
+  --heading-sm: bold 0.875rem/140% var(--font-family);
+  --heading-xs: bold 0.75rem/140% var(--font-family);
+
+  --text-md: 1rem/140% var(--font-family);
+  --text-sm: 0.875rem/140% var(--font-family);
+  --text-xs: 0.75rem/140% var(--font-family);
+
+}
+
+@media (width >= 90em) {
+  :root {
+    /* Font desktop configs */
+    --heading-lg: bold 1.625rem/140% var(--font-family);
+    --heading-md: bold 1.25rem/140% var(--font-family);
+    
+    --heading-sm: bold 1rem/140% var(--font-family);
+    --heading-xs: bold 0.875rem/140% var(--font-family);
+  }
+}
+
+html {
+  font: var(--text-md);
+  color: var(--base-gray-500);
+}
+
+h1, 
+h2 {
+  color: var(--base-gray-600);
+}
+
+h3,
+h4 {
+  color: var(--base-gray-500);
+}
+
+h1 {
+  font: var(--heading-lg);
+}
+
+h2 {
+  font: var(--heading-md);
+}
+
+h3 {
+  font: var(--heading-sm);
+}
+
+h4 {
+  font: var(--heading-xs);
+}
+
+body {
+  background-color:  var(--base-gray-200);
+  min-height: 100vw;
+  overflow: hidden;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul[role="list"] {
+  list-style: none;
+}
+
+

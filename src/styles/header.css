@@ -1,0 +1,38 @@
+header img {
+  width: 6.214375rem;
+}
+
+@media (width >= 90em) {
+  header img {
+    width: 7.25rem;
+  }
+}
+
+header fieldset {
+  background-color: var(--base-gray-300);
+}
+
+header fieldset input {
+  width: 100%;
+  border: 0;
+  background: transparent;
+}
+
+header fieldset {
+  width: 100%;
+}
+
+header fieldset button {
+  border: 0;
+}
+
+.gap-header {
+  --header-gap: 1rem;
+  gap: var(--header-gap);
+}
+
+@media (width >= 90em) {
+  .gap-header {
+    --header-gap: 2rem;
+  }
+}

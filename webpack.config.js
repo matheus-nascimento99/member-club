@@ -9,14 +9,14 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.tsx?$/,
-        use: 'ts-loader',
-        exclude: /node_modules/,
-      },
-      {
         test: /\.css$/i,
         use: ["style-loader", "css-loader"],
       },
+      {
+        test: /\.tsx?$/,
+        use: 'ts-loader',
+        exclude: /node_modules/,
+      }
     ],
   },
   resolve: {
@@ -31,6 +31,7 @@ module.exports = {
     static: {
       directory: path.join(__dirname, 'dist'),
     },
+    watchFiles: ["*.html", "src/**/*"],
     compress: true,
     port: 3000,
     open: true,
@@ -40,6 +41,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "index.html"),
       favicon: path.resolve(__dirname, "src", "assets", "favicon.svg"),
+      title: 'Member club'
     }),
     new CopyPlugin({
       patterns: [
